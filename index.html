@@ -644,8 +644,7 @@
       let chosenOption = "";
       let chosenDetail = ""; // location or sub-choice picked on page 2b
 
-      // Who is this link for? Add ?sub=Ana to the URL you send her, so you can
-      // tell entries apart later — e.g. yoursite.com/index.html?sub=Ana
+      // Who is this link for
       const recipientName =
         new URLSearchParams(window.location.search).get("sub") || "Neznana";
 
@@ -1000,12 +999,6 @@
         document.getElementById("page3").classList.remove("active");
         document.getElementById("page4").classList.add("active");
 
-        // ── HOW TO GET EMAIL ALERTS ──────────────────────────────────────────
-        // 1. Go to https://formspree.io → create free account → New Form
-        // 2. Copy your form ID (looks like "xabcd123") from the dashboard
-        // 3. Replace "YOUR_FORM_ID" below with it. That's it — Formspree
-        //    will email you every time she submits, for free (up to 50/month).
-        // ─────────────────────────────────────────────────────────────────────
         const FORMSPREE_ID = "xvkggpwg";
         const endpoint = `https://formspree.io/f/${FORMSPREE_ID}`;
 
